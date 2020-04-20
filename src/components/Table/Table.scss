@@ -1,0 +1,19 @@
+.hoursDetails {
+  column-count: 5;
+  list-style: none;
+  padding-top: 20px;
+}
+
+.fake {
+  color: #ff0000;
+}
+
+.medium-occupation,
+.medium-occupation td {
+  background: #f5f59f;
+}
+
+.low-occupation,
+.low-occupation td {
+  background: #f59f9f;
+}

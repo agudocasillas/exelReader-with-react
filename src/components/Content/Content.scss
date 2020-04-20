@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Museo';
+  src: url(../../assets/font/MuseoSans-700.otf);
+  font-weight: 700;
+  font-style: normal
+}
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: url(../../assets/font/SourceSansPro-Regular.otf);
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Regular';
+  src: url(../../assets/font/SourceSansPro-Regular.otf);
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'Source Sans Pro Bold';
+  src: url(../../assets/font/SourceSansPro-Bold.otf);
+  font-weight: bold;
+  font-style: normal
+}
+@font-face {
+  font-family: 'Source Sans Pro Semibold';
+  src: url(../../assets/font/SourceSansPro-Semibold.otf);
+  font-weight: 500;
+  font-style: normal
+}
+
+$green-epam : #a3c644;
+$gray-epam: rgb(216, 220, 222);
+$green-epam-hover : #7F993A;
+$gray-epam-hover : rgb(188, 192, 194);
+
+* {
+  font-family: 'Source Sans Pro Regular' !important;
+  font-size: 14px;
+}
+h1, h2, h3, h4, h5{
+  font-family: 'Museo' !important;
+  margin-bottom: 25px;
+}
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 24px;
+}
+h3{
+  font-size: 18px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#content {
+  background: #F4F4F4;
+  min-height: calc(100vh - 120px);
+  padding: 25px 0;
+
+  .icon {
+      background: transparent;
+      border: 0;
+      color: #5AC8D7;
+      font-size: 1.3em;
+  }
+  .green-icon{
+      color: $green-epam;
+      padding: 0 15px;
+  }
+  .w-40 {
+      width: 40%!important;
+  }
+  .w-60 {
+      width: 60%!important;
+  }
+}
+/********* CONTENT *******/
+
+.add-vehicle{
+  position: absolute;
+  top: -55px;
+  right: 15px;
+}
+.add-vehicle.fix {
+  position: relative;
+}
+.custom-card{
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+  padding: 20px 0 0;
+}
+.gXlqCi{
+  display: none !important;
+}
+/*
+DATA TABLE
+*/
+.rdt_TableRow:nth-child(2n) {
+  background-color: #f4f4f4;
+}
+.MuiCardContent-root {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.MuiCardContent-root .MuiCardHeader-root,
+.MuiCardContent-root .MuiCardActions-root {
+  flex-basis: 50%;
+  display: block;
+}
+
+.ReactModalPortal label {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.ReactModalPortal label * {
+  flex: 1 1 auto;
+  margin-left: 5px;
+  max-width: 285px;
+}
+.ReactModalPortal label input[type="checkbox"]{
+  height: 20px;
+}
+
+.ReactModal__Content {
+  min-width: 650px;
+}
+
+.btn-primary {
+  padding: 7px 13px 6px;
+  cursor: pointer;
+  color: #FFF;
+  background: $green-epam;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 0;
+  font-size: 14px;
+}
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: $green-epam-hover;
+}
+.btn-secondary {
+  padding: 7px 13px 6px;
+  cursor: pointer;
+  color: #000;
+  background: $gray-epam;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 0;
+  font-size: 14px;
+}
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: $gray-epam-hover;
+  color: #000;
+}
+.vehicles{
+  .MuiCardHeader-action .MuiIconButton-root {
+      color: #5AC8D7;
+  }
+  .MuiCardHeader-root {
+      padding: 8px 16px 2px;
+      border-bottom: 1px solid #c5c5c5;
+  }
+  .MuiCardContent-root p {
+      width: 100%;
+
+      label {
+          font-weight: bold;
+          margin-right: 5px;
+      }
+  }
+}

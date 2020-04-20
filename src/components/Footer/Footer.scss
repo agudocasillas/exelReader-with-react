@@ -1,0 +1,17 @@
+.footer {
+	background: #464547;
+    color: #999;
+    padding: 15px 15px 10px 15px;
+    
+    .col{
+        padding-top: 0.3em;
+    }
+    .col * {
+        display: inline-block;
+    }
+
+    .col p {
+        margin-left: 25px;
+        margin-bottom: 0;
+    }
+}
