@@ -92,34 +92,6 @@ const options = {
       className: clss,
     };
   },
-  // customRowRender: (data, dataIndex, rowIndex) => {
-  //   console.log(data);
-  //   const monthHours = data[3];
-  //   let clss = '';
-  //   if (monthHours <= 300) {
-  //     clss = 'medium';
-  //   } else if ( monthHours <= 200) {
-  //     clss = 'low';
-  //   }
-
-  //   return (
-  //     <>
-  //       <tr className={clss}>
-  //         <td></td>
-  //         <td>{data[0]}</td>
-  //         <td>{data[1]}</td>
-  //         <td>{data[2]}</td>
-  //         <td>{data[3]}</td>
-  //       </tr>
-  //       <tr>
-  //         <td colSpan='11'>
-  //           <ul className='hoursDetails'>{displayDetails(data[4])}</ul>
-  //         </td>
-  //       </tr>
-  //     </>
-  //   )
-  // },
-  
 }
 
 let minimum = 0;

@@ -60,7 +60,6 @@ export const generateDays = (position, quantity, arr) => {
   if (quantity === 0) {
     return arr;
   };
-// console.log(quantity)
   if(position === 'before') {
     let dateArr = arr[0][0].DateTime.split(' ')[0].split('');
     const entryObj = Object.assign({...arr[0][0]});
@@ -104,7 +103,6 @@ export const getFixedDays = (daysObj) => {
 
   if ( firstLogType === 'exit') {
     const firstDayOfLog = parseFloat(daysIterable[0][0].DateTime.split('/')[1]);
-    console.log('el primero es exit')
     // Generate first the missing entry, then generate days util first day of month
     const entryObj = Object.assign({...daysIterable[0][0]});
     entryObj.DateTime = entryObj.DateTime.split(' ')[0];
@@ -115,7 +113,6 @@ export const getFixedDays = (daysObj) => {
   
   if (lastLogType === 'entry') {
     // Generate last exit, then generate missing days until last day of month
-    console.log('el ultimo es ENTER')
     const exitObj = Object.assign({...daysIterable[daysIterable.length - 1][daysIterable[daysLength].length - 1]});
     exitObj.DateTime = `${exitObj.DateTime.split(' ')[0]} 23:59`;
     exitObj['Lane type'] = 'Exit';
@@ -128,9 +125,6 @@ export const getFixedDays = (daysObj) => {
     const lastDayOfMonth = new Date(year, month, 0).getDate();
     generateDays('after', (lastDayOfMonth - lastDay), daysIterable);
   };
-  // console.log(daysObj)
-  // console.log(daysIterable)
-  // debugger;
 
   if( firstLogType === 'exit' || lastLogType === 'entry') {
     daysObj = daysIterable.reduce((acc, logsArr, idx) => {
@@ -146,15 +140,11 @@ export const getFixedDays = (daysObj) => {
         totalLogs[date].push({...log});
         return totalLogs;
       },{});
-      
-      // console.log(logsReduced)
       const dates = Object.keys(logsReduced);
       acc[dates] = logsReduced[dates];
       return acc;
     }, {});
   }
-
-  // console.log(daysObj)
   return Object.entries(daysObj).reduce((acc, [date, logs], idx)  => {
     if (logs[0]['Lane type'].toLowerCase() === 'exit') {
       const entryObj = Object.assign({...logs[0]});
@@ -174,7 +164,6 @@ export const getFixedDays = (daysObj) => {
       ...acc,
       [date]: (acc[date]) || [],
     }
-
     acc[date].push(logs)
     return acc;
   }, {});
